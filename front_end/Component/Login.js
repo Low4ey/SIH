@@ -20,12 +20,11 @@ return (
 <div>
 
 <label htmlFor="email">Email</label>
+<input type="email" value={email} onChange={(e)=>
 
-<input type="text" name="email" id="email" autocomplete="off"
 
-value={email}
 
-onChange={(e) =>setEmail(e.target.value)}
+setEmail(e.target.value)}
 />
 
 </div>
