@@ -1,0 +1,14 @@
+button {
+    
+    display: -webkit-box;
+     display: flex;
+    float: right;
+    padding: 10px;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+
+   
+    
+    margin-top: -30px;
+}

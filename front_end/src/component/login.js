@@ -1,16 +1,31 @@
 import React from 'react'
 
+
 const Login = () => {
   return (
-    <form action="/login" method="fetch">
-    <label htmlFor="username">Username:</label>
-    <input type="text" id="username" name="username" />
-    <br />
-    <label htmlFor="password">Password:</label>
-    <input type="password" id="password" name="password" />
-    <br />
-    <button type="submit">Log in</button>
+    <>
+    <div class="login-form">
+  <form>
+    <h1>Login</h1>
+    <div class="content">
+      <div class="input-field">
+        <input type="email" placeholder="Email" autocomplete="nope" />
+      </div>
+      <div class="input-field">
+        <input type="password" placeholder="Password" autocomplete="new-password" />
+      </div>
+      <a href="#" class="link">Forgot Your Password?</a>
+    </div>
+    <div class="action">
+      
+      <button>login</button>
+    </div>
   </form>
+</div>
+    
+  
+
+  </>
   )
 }
 
