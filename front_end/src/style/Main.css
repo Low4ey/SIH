@@ -7,8 +7,13 @@ button {
     font-family: 'Rubik', sans-serif;
     cursor: pointer;
     text-transform: uppercase;
-
-   
-    
+    background: #DFD3C3;
+    color: #85586F;
+    border: none;
     margin-top: -30px;
+
+}
+
+button:hover{
+    background: #F8EDE3;
 }

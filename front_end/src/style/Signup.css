@@ -11,7 +11,7 @@
   }
   
   .Signup-form {
-    background: #e0e0e0;
+    background: #DFD3C3;
     width: 600px;
     margin: 65px auto;
     display: -webkit-box;
@@ -21,12 +21,17 @@
             flex-direction: column;
     border-radius: 25px;
     
-    box-shadow: 15px 15px 8px 8px rgba(15, 13, 13, 0.5), -7px -7px 10px 3px rgba(255, 255, 255, 0.25);
+    /* box-shadow: 15px 15px 8px 8px rgba(15, 13, 13, 0.5), -7px -7px 10px 3px rgba(255, 255, 255, 0.25); */
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(133, 88, 111, 0.5);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(133, 88, 111, 0.5);
+    box-shadow: 10px 10px 30px 0px rgba(133, 88, 111, 0.5);
   }
   .Signup-form h1 {
     padding: 35px 35px 0 35px;
     font-weight: 300;
-    font-family: 'Monomaniac One'
+    font-family: "Rubik", sans-serif;
+    text-align: center;
+    color: #85586F;
   }
   .Signup-form .content {
     padding: 35px;
@@ -36,14 +41,14 @@
     padding: 12px 5px;
   }
   .Signup-form .input input {
-    background: #e0e0e0;
+    background: #DFD3C3;
     font-size: 16px;
     display: block;
     font-family: 'Rubik', sans-serif;
     width: 100%;
     padding: 10px 1px;
     border: 0;
-    border-bottom: 1px solid #747474;
+    border-bottom: 1px solid #85586F;
     outline: none;
     -webkit-transition: all .2s;
     transition: all .2s;
@@ -62,20 +67,21 @@
   }
   .Signup-form .input input::placeholder {
     text-transform: uppercase;
-    color: rgb(24, 24, 24);
+    color: #85586F;
     -webkit-font-smoothing: antialiased;
     font-weight: bold;
   }
   .Signup-form .input input:focus {
-    border-color: #222;
+    border-color: black;
   }
   .Signup-form a.link {
     text-decoration: none;
-    color: #747474;
+    color: #85586F;
     letter-spacing: 0.2px;
     text-transform: uppercase;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .Signup-form .signup {
     display: -webkit-box;
@@ -89,11 +95,12 @@
     border: none;
     padding: 18px;
     font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
-    background: #e8e9ec;
-    
-    color: #777;
+    background: #DFD3C3;
+    color: #85586F;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 0;
     letter-spacing: 0.2px;
@@ -107,6 +114,6 @@
 
   }
   .Signup-form .signup button:hover {
-    background: #d8d8d8;
+    background: #F8EDE3;
   }
  

@@ -5,7 +5,7 @@ const Signup = () => {
     <>
     <div class="Signup-form">
   <form>
-    <h1>Signup</h1>
+    <h1>Create a new Account</h1>
     <div class="content">
       <div class="input">
       <input type="username" placeholder="Username" autocomplete="nope" />

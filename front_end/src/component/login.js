@@ -6,7 +6,7 @@ const Login = () => {
     <>
     <div class="login-form">
   <form>
-    <h1>Login</h1>
+    <h1>Login to your Account</h1>
     <div class="content">
       <div class="input-field">
         <input type="email" placeholder="Email" autocomplete="nope" />
@@ -18,7 +18,7 @@ const Login = () => {
     </div>
     <div class="action">
       
-      <button>login</button>
+      <button>Sign in</button>
     </div>
   </form>
 </div>
