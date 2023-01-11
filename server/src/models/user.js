@@ -17,27 +17,27 @@ const user_details = new mongoose.Schema(
         },
         required: [true, "Email required"]
     },
-    phno:
-    {
-        type: Number,
-        trim: true,
-        required: [true, "Please enter your phone no."]
-    },
-    name:
-    {
-        type: String,
-        trim: true,
-        required: [true, "Please enter your name"]
-    },
     password:
     {
         type: String,
-        require: [true,"Please enter your password"]
+        required: [true,"Please enter your Password"],
+        validate: {
+            validator: function(v) {
+                return /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(v);
+            },
+            message: "Password must have Minimum 8 characters, at least 1 letter and 1 number"
+        }
     },
     username:
     {
         type: String,
-        require: [true,"please enter your password"]
+        required: [true,"Please enter your UserName"],
+        validate: {
+            validator: function(v) {
+                return /^[A-Za-z][A-Za-z0-9_]{5,29}$/.test(v);
+            },
+            message: "Username not available"
+        }
     }
 });
 
