@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const User = require("../models/userDetail")
+
+const {User} = require("../models")
 const config = require("../config/config");
 const bcrypt = require("bcrypt");
 
@@ -17,12 +17,12 @@ const createUser = async ({
     password,
     username
 }) => {
-    checkEmail();
-    const pass = hashPassword(password);
+    // checkEmail();
+    // const pass = (await hashPassword(password)).toString();
     const user = await User.create(
         {
             email,
-            pass,
+            password,
             username
         }
     )

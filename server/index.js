@@ -11,7 +11,6 @@ const connectApp=async()=>{
 
     app.use(bodyParser.urlencoded({ extended: true }));
 	app.use(express.json());
-	app.use(express.json());
 
     try {
 		await dbConnect.dbConnect();

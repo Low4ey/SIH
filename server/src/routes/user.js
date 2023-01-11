@@ -4,9 +4,8 @@ const router = express.Router();
 
 
 
-router.post("/",async(req,res,next)=>{
+router.post("/",async(req,res)=>{
     try{
-        console.log(req.body);
         const result=await userController.createUser(req.body);
         res.json(result);
     }catch(error){
