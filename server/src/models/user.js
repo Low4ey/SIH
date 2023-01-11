@@ -1,7 +1,6 @@
 // email , phno , name , password , username 
 const mongoose = require('mongoose');
-
-const user_details = new mongoose.Schema(
+const userSchema = new mongoose.Schema(
 {
     email:
     {
@@ -40,5 +39,5 @@ const user_details = new mongoose.Schema(
         }
     }
 });
-
-module.exports = mongoose.model('Userdetails', user_details);
+const User=mongoose.models.User || mongoose.model('User', userSchema);
+module.exports=User;
