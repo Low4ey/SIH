@@ -41,4 +41,6 @@ const user_details = new mongoose.Schema(
     }
 });
 
-module.exports = mongoose.model('Userdetails', user_details);
+const Userdetails= mongoose.model('Userdetails', user_details);
+
+export default Userdetails;
