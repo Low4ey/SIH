@@ -21,7 +21,7 @@ const Signup = () => {
     </div>
     <div class="signup">
       
-      <button>signup</button>
+      <button>sign up</button>
     </div>
   </form>
 </div>
