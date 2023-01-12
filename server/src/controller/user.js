@@ -3,14 +3,13 @@ const {User} = require("../models")
 const config = require("../config/config");
 const bcrypt = require("bcrypt");
 
-const hashPassword = async({
-    password
-}) => {
-        const salt = await bcrypt.genSalt(Number(config.SALT));
-        const hashPassword = await bcrypt.hash(password , salt);
+// const hashPassword = async({
+//     password
+// }) => {
 
-        return hashPassword;
-}
+
+//         return hashPassword;
+// }
 
 const createUser = async ({
     email,
@@ -18,11 +17,15 @@ const createUser = async ({
     username
 }) => {
     // checkEmail();
-    // const pass = (await hashPassword(password)).toString();
+    const salt = await bcrypt.genSalt(Number(config.SALT));
+    console.log(salt);
+    console.log(password);
+    const hashPassword = await bcrypt.hash(password , salt);
+    console.log(hashPassword);
     const user = await User.create(
         {
             email,
-            password,
+            password:hashPassword,
             username
         }
     )
@@ -44,4 +47,4 @@ const checkEmail = async({
 
 
 
-module.exports = {createUser, checkEmail, hashPassword};
+module.exports = {createUser, checkEmail}; // , hashPassword
