@@ -23,10 +23,7 @@ const generateTokens = async(user) =>{
         if(userToken) await userToken.remove();
         
         await userController.createUserToken({userId:user._id , token:refreshToken});
-        // await new userToken({userId:user._id , otken:refreshToken}).save();
         
-        
-
         return Promise.resolve({accessToken , refreshToken});
 
     } catch (error) {

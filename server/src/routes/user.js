@@ -4,18 +4,15 @@ const { checkEmail, getUser ,createUserToken } = require("../controller/user");
 const router = express.Router();
 const generateTokens = require("../utils/generateTokens")
 const bcrypt = require("bcrypt");
+const ErrorHandler = require("../utils/errorHandler");
 
-router.post("/signup",async(req,res)=>{
+
+router.post("/signup",async(req,res,next)=>{
     try{
-        const emailcheck = await checkEmail(req.body);
-        if(emailcheck){
-            res.json({error : true , message : "Email exits"})
-        }
         const result=await userController.createUser(req.body);
         res.json(result);
     }catch(error){
-        console.log(error);
-        // res.json({error:true , message:"Internal Server error"});
+        next(new ErrorHandler(error))
     }
 })
 
@@ -26,12 +23,12 @@ router.post("/login",async(req,res)=>{
         if(!user)
             return res.status(401).json({error:true, message:"Email or Password Incorrect"});
             
-        const curruser = await getUser(req.body);
-        const verifyPassword = await bcrypt.compare(req.body.password , curruser.password);
+        const currentUser = await getUser(req.body);
+        const verifyPassword = await bcrypt.compare(req.body.password , currentUser.password);
         if(!verifyPassword)
             return res.status(401).json({error:true, message:"Email or Password Incorrect"});
         
-        const {accessToken , refreshToken} = await generateTokens(curruser);
+        const {accessToken , refreshToken} = await generateTokens(currentUser);
         res.status(200).json({
             error:false,
             accessToken,
@@ -40,8 +37,7 @@ router.post("/login",async(req,res)=>{
         })
 
     }catch(error){
-        console.log(error);
-        res.status(400).json({error:true , message:"Internal Server error"});
+        next(new ErrorHandler(error));
     }
 })
 

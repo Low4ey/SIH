@@ -36,14 +36,6 @@ const createUser = async ({
     const salt = await bcrypt.genSalt(Number(config.SALT));
     const hashPassword = await bcrypt.hash(password , salt);
 
-    // const emailcheck = await checkEmail(email);
-    // console.log(emailcheck)
-    // if(emailcheck)
-    // {
-    //     console.log("Email Exists")
-    //     return {error : true};
-    // }
-
     const user = await User.create(
         {
             email,
