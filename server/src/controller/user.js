@@ -58,8 +58,6 @@ const createUserToken = async ({
     userId,
     token
 }) => {
-    console.log(userId);
-    console.log(token);
     const userToken = await UserToken.create(
         {
             userId,

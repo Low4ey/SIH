@@ -25,12 +25,9 @@ router.post("/login",async(req,res)=>{
         const user = await checkEmail(req.body);
         if(!user)
             return res.status(401).json({error:true, message:"Email or Password Incorrect"});
-
-
+            
         const curruser = await getUser(req.body);
-        console.log(curruser);
         const verifyPassword = await bcrypt.compare(req.body.password , curruser.password);
-        console.log(verifyPassword)
         if(!verifyPassword)
             return res.status(401).json({error:true, message:"Email or Password Incorrect"});
         
