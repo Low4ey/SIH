@@ -2,37 +2,37 @@ const {WareHouse} = require("../models");
 const config = require("../config/config");
 
 const addWareHouse = async ({
-    title,
-    description,
-    weight,
-    dimension
+    type,
+    currentCapacity,
+    maxCapacity,
+    city
 }) => {
     
     const wareHouse = await WareHouse.create(
         {
-            title,
-            description,
-            weight,
-            dimension
+            type,
+            currentCapacity,
+            maxCapacity,
+            city
         }
     );
     return wareHouse;
 }
 
 const updateWareHouse = async ({id,
-    title,
-    description,
-    weight,
-    dimension
+    type,
+    currentCapacity,
+    maxCapacity,
+    city
 }) => {
     
     const wareHouse = await WareHouse.findOneAndUpdate(
         {_id:id},
         {
-            title,
-            description,
-            weight,
-            dimension
+            type,
+            currentCapacity,
+            maxCapacity,
+            city
         },
         {
             new: true,
