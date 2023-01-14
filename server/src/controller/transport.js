@@ -2,37 +2,33 @@ const {Transport} = require("../models");
 const config = require("../config/config");
 
 const addTransport = async ({
-    title,
-    description,
-    weight,
-    dimension
+    mode,
+    coldStorage,
+    availabeVehicle
 }) => {
     
     const transport = await Transport.create(
         {
-            title,
-            description,
-            weight,
-            dimension
+            mode,
+            coldStorage,
+            availabeVehicle
         }
     );
     return transport;
 }
 
 const updateTransport = async ({id,
-    title,
-    description,
-    weight,
-    dimension
+    mode,
+    coldStorage,
+    availabeVehicle
 }) => {
     
     const transport = await Transport.findOneAndUpdate(
         {_id:id},
         {
-            title,
-            description,
-            weight,
-            dimension
+            mode,
+            coldStorage,
+            availabeVehicle
         },
         {
             new: true,
