@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-
-const userSchema = new mongoose.Schema(
+const {Schema}=mongoose;
+const userSchema = new Schema(
 {
     email:
     {
@@ -37,7 +37,8 @@ const userSchema = new mongoose.Schema(
             },
             message: "Username not available"
         }
-    }
+    },
+    order:[{type:Schema.Types.ObjectId,ref:"Order"}]
 });
 
 const User= mongoose.model.User || mongoose.model('User', userSchema);
