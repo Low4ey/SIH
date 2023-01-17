@@ -2,7 +2,7 @@ const express =require("express");
 const config = require("./src/config/config");
 const dbConnect = require("./src/service/db");
 const bodyParser = require("body-parser");
-const {userRouter, itemRouter, orderRouter, stateRouter, transportRouter}=require("./src/routes");
+const {userRouter, itemRouter, orderRouter, stateRouter, transportRouter, wareHouseRouter}=require("./src/routes");
 const errorMiddleware = require("./src/utils/error");
 
 
@@ -24,6 +24,7 @@ const connectApp=async()=>{
     app.use("/orderapi",orderRouter)
     app.use("/stateapi",stateRouter)
     app.use("/transportapi",transportRouter)
+    app.use("/warehouseapi",wareHouseRouter)
     app.listen(config.PORT,()=>{
         console.log(`Server Running at ${config.PORT}`);
     })
