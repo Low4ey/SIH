@@ -1,6 +1,7 @@
 # SIH
 Screen Round
 
+## Credits
 ### Code Contributors
 
 Thanks to these awesome code contributors who keep this project going
