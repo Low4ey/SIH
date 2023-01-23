@@ -17,8 +17,7 @@ const Login = () => {
       <a href="#" class="link">Forgot Your Password?</a>
     </div>
     <div class="action">
-      
-      <button>Sign in</button>
+      <button >Sign in</button>
     </div>
   </form>
 </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import Login from './login'
 import Signup from './signup'
+
 import "../style/Main.css"
 
 const MainLog = () => {
