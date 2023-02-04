@@ -116,15 +116,16 @@ body {
 
 #cool {
     position: relative;
-    bottom: 47px;
-    right: 160px;
+    bottom: 17px;
+    right: 133px;
     /* border: 2px solid green; */
 }
 
 @media screen and (max-width:820px){
     .destination {
         max-width: 100%;
-        margin: 0 auto;padding: 100px 50px 0 35px;
+        margin: auto;
+        padding: 100px 50px 0 35px;
 
         background: #56db95;
         width: 500px;
@@ -136,5 +137,7 @@ body {
         -moz-box-shadow: 10px 10px 30px 0px rgba(133, 88, 111, 0.5);
         box-shadow: 10px 10px 30px 0px rgba(133, 88, 111, 0.5);
     }
-    
+    #cool {
+        position: relative;
+    }
 }

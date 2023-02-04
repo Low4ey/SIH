@@ -3,15 +3,15 @@ import "./style/Signup.css"
 import "./style/home.css"
 
 import './App.css';
-import MainLog from "./component/mainLog";
-import Home from "./component/home";
+
+import Home from "./component/home"
 
 
 function App() {
   return (<>
+    
+    <Home />
 
-    {/* <MainLog /> */}
-    <Home/>
   </>
   );
 }
